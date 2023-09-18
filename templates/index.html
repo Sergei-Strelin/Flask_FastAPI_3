@@ -1,0 +1,15 @@
+{% extends 'base.html' %}
+
+{% block title %}
+{{ title }}
+{% endblock %}
+
+
+{% block content %}
+    <div class="cent">
+         {% if name %}
+            <h1>Привет, {{ name }}</h1>
+        <br>
+        {% endif %}
+    </div>
+{% endblock %}

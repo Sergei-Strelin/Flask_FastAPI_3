@@ -1,0 +1,16 @@
+{% extends 'base.html' %}
+
+{% block title %}
+    {{title}}
+{% endblock %}
+
+{% block content %}
+<h1>Список зарегистрированных пользователей:</h1>
+{% for user in users %}
+    <p class="col-12 col-md-6">Имя пользователя: {{user.name }}<br>
+                               Email пользователя: {{ user.email }}<br>
+                               День рожденье: {{ user.date_of_birth.strftime("%d.%m.%Y") }}
+    </p>
+
+{%endfor%}
+{% endblock %}
